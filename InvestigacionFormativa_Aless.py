@@ -22,10 +22,13 @@ class MySeq:
     def __init__(self, seq, tipoSecuencia=""):
         self.seq=seq
         self.tipoSecuencia=tipoSecuencia
+
     def imprimir_secuencia(self):
         print("Secuencia:",self.seq)
+
     def getbiotiposeq(self):
         return self.tipoSecuencia
+
     def MostrarInfoSecuencia(self):
         texto = str(s1)
         cadena = list(texto)
@@ -37,14 +40,10 @@ class MySeq:
         
         if ('R' in secuencia) or ('N' in secuencia) or ('D' in secuencia) or ('E' in secuencia) or ('Q' in secuencia) or ('H' in secuencia) or ('I' in secuencia) or ('L' in secuencia) or ('K' in secuencia) or ('M' in secuencia) or ('F' in secuencia) or ('P' in secuencia) or ('S' in secuencia) or ('W' in secuencia) or ('Y' in secuencia) or ('V' in secuencia) :
             s1.setbiotiposeq("PROTEINA")
-            
-                                                                   
-        
+
         if 'U' in secuencia:
             s1.setbiotiposeq("RNA")
-         
-        
-        
+
         if 'A' and 'G'and 'C'and'T' in ListaSecuencia and 'U' not in ListaSecuencia:
             for i in range (0,tamanio-1):
                 for j in range(0, tamanio2-1):
@@ -55,10 +54,7 @@ class MySeq:
                         if j==tamanio2-1:
                                 while j!=0:
                                     
-                                   j=j-1
-                         
-                                
-                                
+                                   j=j-1   
                         else:
                             if (( (j-1)!=-1) and j+1==4):
                                 j=j-1
@@ -66,11 +62,8 @@ class MySeq:
                                 j=j+1
                             
             s1.setbiotiposeq("DNA")        
-                        
-       
-            
-        
-        
+
+    # Cuenta el numero de veces que aparece una cadena en la secuencua
     def ContarOcurrencias(self, buscar_seq):
         return self.seq.count(buscar_seq)
        
@@ -97,21 +90,11 @@ class MySeq:
                   nroU=cadena.count("U")
                   
                   print(nroA,"valores de A Identificadas en la secuencia")
-                         
-                
-                         
                   print(nroC,"valores de C Identificadas en la secuencia")
-                         
-                     
-                         
-                  print(nroG,"valores de G Identificadas en la secuencia")
-                          
-                     
-                         
+                  print(nroG,"valores de G Identificadas en la secuencia")   
                   print(nroT,"valores de T Identificadas en la secuencia")
                   
                   if 'U' in cadena:
-                      
                       print(nroU,"valores de U Identificadas en la secuencia")
                   
                   if 'U' in cadena and 'T' not in cadena:
@@ -122,11 +105,10 @@ class MySeq:
                   
                   
                   while True:
-                      
                       try:
                           if ('U' in cadena and 'T' in cadena) or ('U' not in cadena) or ('T' not in cadena):
                               
-                              rpta = input("No se encontro U en la secuencia o faltan valores por convertir, desea convertir T en U? (Si / No):")
+                            rpta = input("No se encontro U en la secuencia o faltan valores por convertir, desea convertir T en U? (Si / No):")
                          
                       except ValueError:
                           print("Ingrese una respuesta valida")
