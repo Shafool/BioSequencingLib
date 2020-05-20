@@ -277,7 +277,7 @@ class Proteina(Secuencia):
 
 # Otras funciones
     def validar_prot(self, seq):
-        aminoacidos = ['A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V',]
+        aminoacidos = ['A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V', '_']
 
         secuencia = seq.upper()
         valido = super().validar_secuencia(secuencia, aminoacidos)
